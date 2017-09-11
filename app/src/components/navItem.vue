@@ -45,6 +45,7 @@
             </li>
           </ul>
         </div>
+        <aside-box></aside-box>
       </div>
     </div>
   </div>
@@ -52,6 +53,7 @@
 <script>
   import Header from '@/components/Header'
   import Nav from '@/components/Nav'
+  import Aside from '@/components/side'
   export default {
     data () {
       return {
@@ -91,7 +93,8 @@
     },
     components: {
       'qy-header': Header,
-      'qy-nav': Nav
+      'qy-nav': Nav,
+      'aside-box': Aside
     }
   }
 </script>
@@ -113,6 +116,7 @@
       margin: 30px auto;
       max-width: 1000px;
       width: 100%;
+      justify-content: space-between;
     }
   }
   .news-list{
