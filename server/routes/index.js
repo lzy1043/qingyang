@@ -7,6 +7,7 @@ router.get('/', (req,res) => {
   const page = req.query.page
   const channelKey = req.query.key || 'TODAY'
   const offset = (page - 1) * 10
+  console.log(123)
   mysql.query(`select * from qingyang where type = '${channelKey}' limit ${offset}, 10`,(err) => {
     if(err){
       console.log('query Error:' + err.message)

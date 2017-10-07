@@ -99,7 +99,7 @@
             </div>
           </div>
         </div>
-        <div class="news-side"></div>
+        <aside-box></aside-box>
       </div>
     </div>
   </div>
@@ -108,6 +108,7 @@
 <script>
   import Header from '@/components/Header'
   import Nav from '@/components/Nav'
+  import side from '@/components/side'
   export default {
     name: 'Index',
     data () {
@@ -136,7 +137,8 @@
     },
     components: {
       'qy-header': Header,
-      'qy-nav': Nav
+      'qy-nav': Nav,
+      'aside-box': side
     },
     methods: {
       fetchInitData (page, key) {
@@ -176,6 +178,7 @@
     }
     .news-index{
       width: 750px;
+      margin: 15px 20px 0 0;
       box-shadow: 1px 2px 3px #eee;
       background-color: #fff;
       a:hover{

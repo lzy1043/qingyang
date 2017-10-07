@@ -9,6 +9,7 @@ import UI from '@/views/ui'
 import TechFun from '@/views/tech_fun'
 import AppTool from '@/views/app_tool'
 import Overseas from '@/views/overseas'
+import Article from '@/views/article'
 
 Vue.use(Router)
 
@@ -62,6 +63,11 @@ export default new Router({
       path: '/overseas',
       name: 'overseas',
       component: Overseas
+    },
+    {
+      path: '/a/:id',
+      name: 'article',
+      component: Article
     }
   ]
 })

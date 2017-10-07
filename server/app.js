@@ -34,6 +34,7 @@ app.use('/index', require('./routes/index'));
 app.use('/hotNews', require('./routes/hotnews'));
 app.use('/hotNewsGroup', require('./routes/hotnewsgroup'));
 app.use('/test',require('./routes/test'))
+app.use('/a',require('./routes/article.js'))
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
