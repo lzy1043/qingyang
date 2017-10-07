@@ -6,7 +6,6 @@ const {createWebAPIRequest} = require('../util/util')
 const mysql = require('../util/mysql')
 router.get('/:id',(req,res) => {
   const articleId = req.params.id
-  console.log(`news.aotu.io/a/${articleId}`)
   request(`https://news.aotu.io/a/${articleId}`, (err, response, body) => {
     if (!err && response.statusCode === 200) {
       const $ = cheerio.load(body)
