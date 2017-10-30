@@ -1,0 +1,124 @@
+li {
+  list-style: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+.view {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex: 1;
+  .news-wrap {
+    display: flex;
+    margin: 30px auto;
+    max-width: 1000px;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.news-list {
+  width: 750px;
+  box-shadow: 1px 2px 3px #eee;
+  background-color: #fff;
+  padding: 0;
+  a:hover {
+    color: rgba(0, 166, 254, 0.6)!important;
+  }
+  .list-item {
+    padding: 20px 0 20px 30px;
+    border-bottom: 1px solid #eee;
+    &:last-child {
+      border-color: transparent;
+    }
+    .item-info {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      color: rgba(50, 50, 50, .8);
+      .sub-title {
+        display: inline-block;
+        max-width: 489px;
+        margin: 20px 0 10px;
+        color: #000;
+        font-weight: 400;
+        font-size: 16px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .descp {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .status {
+        padding: 16px 0px 0px;
+        .meta-tag {
+          float: left;
+        }
+        .sort-tag {
+          float: right;
+          .label-tag {
+            background-color: rgb(238, 238, 238);
+            border-radius: 3px;
+            padding: 8px 10px;
+            margin: 0px 0px 0px 15px;
+            color: rgba(50, 50, 50, 0.8);
+          }
+        }
+        .label {
+          padding: 8px 0;
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 12px;
+          color: #666;
+          float: left;
+          margin-right: 10px;
+          line-height: 16px;
+        }
+        .label-time {
+          margin-right: 0;
+          height: 21px;
+          max-width: 50%;
+          overflow: hidden;
+          -ms-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .img-cover {
+      width: 200px;
+      min-width: 200px;
+      height: 160px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: none repeat scroll 0 0 rgba(87, 120, 137, 0.1);
+      box-shadow: 0 0 6px #bdccd4;
+      border: 3px solid #fdfdfd;
+    }
+    .item-info-text {
+      max-width: 490px;
+      flex: 1;
+      padding-right: 20px;
+    }
+  }
+  .avatar-info {
+    .avatar {
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+    }
+    .nickname {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 14px;
+    }
+  }
+}
