@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -8,6 +9,8 @@ import { NavComponent } from './nav/nav.component';
 import { NavItemComponent } from './nav-item/nav-item.component';
 import { SideComponent } from './side/side.component';
 import { IndexComponent } from './index/index.component';
+
+import { AppRouterModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,14 +23,8 @@ import { IndexComponent } from './index/index.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([{
-      path: '',
-      redirectTo: '/index',
-      pathMatch: 'full'
-    }, {
-      path: 'index',
-      component: IndexComponent
-    }])
+    AppRouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
