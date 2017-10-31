@@ -1,0 +1,110 @@
+<div class="view">
+  <app-header></app-header>
+  <app-nav></app-nav>
+  <div class="news-wrap">
+    <div class="news-index">
+      <div class="news-editor news-part">
+        <h3 class="title">
+          <i class="fa fa-flash"></i>
+          编辑推荐
+        </h3>
+        <div class="content">
+          <svg width="44px" height="44px" viewBox="0 0 44 44" class="spinner">
+            <circle fill="none" stroke-width="4" stroke-linecap="round" cx="22" cy="22" r="20" class="path"></circle>
+          </svg>
+          <ul class="list">
+            <li class="list-item" *ngFor="let item of hotnewsGroup">
+              <div class="main-title">{{item.title}}</div>
+              <div class="sub-content">
+                <div class="cover-img">
+                  <img src="{{item.coverUrl + '?imageView2/5/w/158/h/112/format/jpg/interlace/1'}}" height="112" width="158">
+                </div>
+                <ul class="sub-title-list">
+                  <li class="sub-list-item" *ngFor="let subItem of item.newsList">
+                    <a>{{subItem.title}}</a>
+                    <!-- <router-link :to="'/a/' + subItem.objectId">{{subItem.title}}</router-link> -->
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="news-hot news-part">
+        <h3 class="title">
+          <i class="fa fa-fire"></i>
+          热门资讯
+        </h3>
+        <div class="content">
+          <svg width="44px" height="44px" viewBox="0 0 44 44" class="spinner">
+            <circle fill="none" stroke-width="4" stroke-linecap="round" cx="22" cy="22" r="20" class="path"></circle>
+          </svg>
+          <ul class="list clearfix">
+            <li class="list-item" *ngFor="let item of hotnews">
+              <div class="item-info">
+                <h4 class="sub-title">
+                   <a>{{item.title}}</a>
+                   <!-- <router-link :to="'/a/' + item.objectId">{{item.title}}</router-link> -->
+                 </h4>
+                <div class="status clearfix">
+                  <span class="label"><a href="{{'https://news.aotu.io/origin/' + item.originKey}}">{{item.origin.name}}</a></span>
+                  <span class="label">
+                     <i class="fa fa-eye"></i>
+                     {{item.readCount}}
+                   </span>
+                  <span class="label">
+                     <i class="fa fa-heart"></i>
+                     {{item.likeCount ? item.likeCount : 0}}
+                   </span>
+                  <span class="label label-time">
+                     
+                   </span>
+                </div>
+              </div>
+              <div class="img-cover">
+                <a>
+                   <img src="{{item.image.url + '?imageView2/5/h/68/format/jpg/interlace/1'}}">
+                 </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="news-part news-today">
+        <h3 class="title">
+          <i class="fa fa-paw"></i>
+          今日资讯
+        </h3>
+        <div class="content">
+          <ul class="list clearfix">
+            <li class="list-item" *ngFor="let item of initData">
+              <div class="item-info">
+                <div class="sort">
+                  <div class="avatar-info"><a><img class="avatar" src="{{item.origin.avatar.url + '?imageView2/5/w/30/h/30/format/jpg/interlace/1'}}" alt="{{item.origin.avatar.name}}"><span class="nickname">{{item.origin.name}}</span></a></div>
+                </div>
+              </div>
+              <div class="item-info">
+                <div class="item-info-text">
+                  <a href="">{{item.title}}</a>
+                  <!-- <router-link class="sub-title" :to="'/a/' + item.objectId">{{item.title}}</router-link> -->
+                  <div class="descp">{{item.excerpt}}</div>
+                </div>
+                <div class="img-cover">
+                  <a>
+                     <img src="{{item.image.url + '?imageView2/2/w/200/h/160/format/jpg/interlace/1'}}">
+                   </a>
+                  <!-- <router-link :to="'/a/' + item.objectId">
+                     <img :src="item.image.url + '?imageView2/2/w/200/h/160/format/jpg/interlace/1'">
+                   </router-link> -->
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="news-side">
+      <app-side></app-side>
+    </div>
+  </div>
+</div>

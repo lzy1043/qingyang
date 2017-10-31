@@ -1,12 +1,7 @@
 a {
   cursor: pointer;
 }
-
 .view {
-  display: flex;
-  max-width: 1000px;
-  margin: 0 auto;
-  flex: 1;
   .news-wrap {
     display: flex;
     margin: 30px auto;
@@ -212,5 +207,8 @@ a {
         font-size: 14px;
       }
     }
+  }
+  .news-side {
+    margin-left: 20px;
   }
 }
