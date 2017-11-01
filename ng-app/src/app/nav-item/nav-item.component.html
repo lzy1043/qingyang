@@ -29,16 +29,16 @@
                   </div>
                   <div class="sort-tag clearfix">
                     <span class="label label-time">
-                       <!-- {{Math.floor((new Date().getTime() - new Date(item.publishedDate.iso).getTime())/(24 * 60 *60*1000))}}天前 -->
+                       <!-- {{Math.floor((new Date().getTime() - new Date(item.publishedDate.iso).getTime())/(24 * 60 *60*1000))}} -->1天前
                       </span>
                     <span class="label label-tag" *ngFor="let iTag of item.tags">{{iTag}}</span>
                   </div>
                 </div>
               </div>
               <div class="img-cover">
-                <!-- <a herf="{{'/a/' + item.objectId}}">
+                <a routerLink="{{'/a/' + item.objectId}}">
                   <img src="{{item.image.url + '?imageView2/2/w/200/h/160/format/jpg/interlace/1'}}">
-                </a> -->
+                </a>
               </div>
             </div>
           </li>
