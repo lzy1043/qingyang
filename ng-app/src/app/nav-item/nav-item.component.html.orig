@@ -1,0 +1,62 @@
+<div class="nav-item">
+  <app-header></app-header>
+  <app-nav></app-nav>
+  <div class="view">
+    <div class="news-wrap">
+      <div class="new-index">
+        <ul class="news-list news-part">
+          <li *ngFor=" let item of newList" class="list-item">
+            <div class="item-info">
+              <div class="sort">
+                <div class="avatar-info"><a><img class="avatar" src="{{item.origin.avatar.url + '?imageView2/5/w/30/h/30/format/jpg/interlace/1'}}" alt="{{item.origin.avatar.name}}"><span class="nickname">{{item.origin.name}}</span></a>
+                </div>
+              </div>
+            </div>
+            <div class="item-info">
+              <div class="item-info-text">
+                <a class="sub-title" href="{{'/a/' + item.objectId}}">{{item.title}}</a>
+                <div class="descp">{{item.excerpt}}</div>
+                <div class="status clearfix">
+                  <div class="meta-tag clearfix">
+                    <span class="label">
+                        <i class="fa fa-eye"></i>
+                        {{item.readCount}}
+                      </span>
+                    <span class="label">
+                        <i class="fa fa-heart"></i>
+                        {{item.likeCount ? item.likeCount : 0}}
+                      </span>
+                  </div>
+                  <div class="sort-tag clearfix">
+                    <span class="label label-time">
+<<<<<<< Updated upstream
+                       <!-- {{Math.floor((new Date().getTime() - new Date(item.publishedDate.iso).getTime())/(24 * 60 *60*1000))}} -->1天前
+=======
+                       <!-- {{Math.floor((new Date().getTime() - new Date(item.publishedDate.iso).getTime())/(24 * 60 *60*1000))}}天前 -->
+>>>>>>> Stashed changes
+                      </span>
+                    <span class="label label-tag" *ngFor="let iTag of item.tags">{{iTag}}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="img-cover">
+<<<<<<< Updated upstream
+                <a routerLink="{{'/a/' + item.objectId}}">
+=======
+                <!-- <a herf="{{'/a/' + item.objectId}}">
+>>>>>>> Stashed changes
+                  <img src="{{item.image.url + '?imageView2/2/w/200/h/160/format/jpg/interlace/1'}}">
+                </a> -->
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+<<<<<<< Updated upstream
+      <app-side></app-side>
+=======
+      <!-- <aside-box></aside-box> -->
+>>>>>>> Stashed changes
+    </div>
+  </div>
+</div>
